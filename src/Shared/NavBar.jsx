@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContex } from './AuthProvider';
 
 const NavBar = () => {
+
+  const { user, logOut } = useContext(AuthContex);
 
      // Navigation Links
   const links = (
@@ -23,9 +26,8 @@ const NavBar = () => {
       </li>
     </>
   );
-  const user={
-    email: "a@babel.com"
-  }
+ 
+
   
     return (
         <div className="navbar bg-base-100 dark:bg-gray-900 dark:text-white">
@@ -89,7 +91,7 @@ const NavBar = () => {
                       {user?.displayName || 'Anonymous'}
                     </div>
                     <button
-                    //   onClick={logOut}
+                      onClick={logOut}
                       className="bg-red-500 text-white rounded px-3 py-1 shadow-md hover:bg-red-600 mt-1"
                     >
                       Log Out
