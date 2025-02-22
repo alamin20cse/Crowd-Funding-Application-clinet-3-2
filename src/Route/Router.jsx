@@ -5,6 +5,7 @@ import Login from "../Layout/Login";
 import Register from "../Layout/Register";
 import AddNewCampaign from "../Page/AddNewCampaign";
 import AllCampaign from "../Page/AllCampaign";
+import DetailsCampaign from "../Page/DetailsCampaign";
 
 
 export const router = createBrowserRouter([
@@ -31,6 +32,11 @@ export const router = createBrowserRouter([
       {
         path:'/allcampaign',
         element:<AllCampaign></AllCampaign>
+      },
+      {
+        path:'/detailsCampain/:id',
+        element:<DetailsCampaign></DetailsCampaign>
+
       }
     ]
   },

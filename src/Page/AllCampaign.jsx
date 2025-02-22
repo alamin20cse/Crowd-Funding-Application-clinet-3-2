@@ -74,7 +74,7 @@ const AllCampaign = () => {
                 <td className="text-sm lg:text-base md:text-sm sm:text-xs">{campaign.minimumDonation}</td>
                 <td className="text-left hidden lg:table-cell lg:text-sm md:text-xs sm:text-[10px]">{campaign.name}</td>
                 <td className="text-sm lg:text-base md:text-sm sm:text-xs">
-                  <NavLink className="btn btn-primary" to={`/details/${campaign._id}`}>
+                  <NavLink className="btn btn-primary" to={`/detailsCampain/${campaign._id}`}>
                     See More
                   </NavLink>
                 </td>
