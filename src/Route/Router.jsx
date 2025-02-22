@@ -6,6 +6,7 @@ import Register from "../Layout/Register";
 import AddNewCampaign from "../Page/AddNewCampaign";
 import AllCampaign from "../Page/AllCampaign";
 import DetailsCampaign from "../Page/DetailsCampaign";
+import Payment from "../Page/Payment";
 
 
 export const router = createBrowserRouter([
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
         path:'/detailsCampain/:id',
         element:<DetailsCampaign></DetailsCampaign>
 
+      },
+      {
+        path:'/payment/:id',
+        element:<Payment></Payment>
       }
     ]
   },

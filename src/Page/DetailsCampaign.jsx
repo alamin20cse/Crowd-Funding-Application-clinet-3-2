@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const DetailsCampaign = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [campaign, setCampaign] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -51,10 +53,25 @@ const DetailsCampaign = () => {
     email,
     date,
     status,
+    _id
   } = campaign;
 
   const handleDonate = () => {
-    alert(`Thank you for supporting ${title}!`);
+    const currentDate = new Date();
+    const campaignDeadline = new Date(deadline);
+
+    // Check if the campaign has expired
+    if (campaignDeadline < currentDate) {
+      Swal.fire({
+        title: "Campaign Expired",
+        text: "You cannot donate to this campaign as the deadline has passed.",
+        icon: "error",
+      });
+      return;
+    }
+
+    // Redirect to payment page
+    navigate(`/payment/${_id}`);
   };
 
   return (
@@ -91,9 +108,6 @@ const DetailsCampaign = () => {
             </span>
           </p>
           <p>🕒 Created: {new Date(date).toLocaleDateString()}</p>
-          <div className=" bg-blue-600 text-white text-sm px-3 py-1 rounded-full shadow-md">
-          {status}
-        </div>
         </div>
 
         {/* Donate Button */}
