@@ -1,8 +1,9 @@
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CheckoutForm from './CheckoutForm';
+import { AuthContex } from '../Shared/AuthProvider';
 
 const stripePromise=loadStripe(import.meta.env.VITE_Payment_Gateway_PK)
 
@@ -12,6 +13,7 @@ const Payment = () => {
     const [campaign, setCampaign] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const {user}=useContext(AuthContex);
   
     useEffect(() => {
       setLoading(true);
@@ -59,6 +61,50 @@ const Payment = () => {
       status,
       _id
     } = campaign;
+
+
+
+  const handlePayment=e=>{
+
+
+    e.preventDefault();
+    const totalprice = e.target.totalprice.value; 
+
+    
+    const paymentInfo={
+      email:user?.email,
+      name:user?.displayName,
+      userPhoto:user?.photoURL,
+      amount: totalprice,
+      date: new Date(), //jtc date covert . use moment js
+      campaignTitle: title,
+      campaignId:_id,
+      thumbnail:thumbnail,
+     
+
+
+  }
+  console.log(paymentInfo);
+
+  // send to backend 
+  fetch('http://localhost:5000/order',{
+    method:'POST',
+    headers:{ "content-type":'application/json'},
+    body:JSON.stringify(paymentInfo)
+  })
+  .then(res=>res.json())
+  .then(result=>{
+    window.location.replace(result.url)
+    console.log(result)
+  })
+
+
+  }
+
+
+
+
+
   
   
     return (
@@ -119,6 +165,18 @@ const Payment = () => {
   </Elements>
 </div>
 
+
+{/* sslc */}
+<div className='bg-orange-300 my-5'>
+  <form onSubmit={handlePayment}>
+
+    <input type="number" name="totalprice" placeholder='tk' id="" />
+
+<button className='btn'>pay</button>
+  </form>
+
+
+</div>
 
       </div>
     );

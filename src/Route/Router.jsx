@@ -7,6 +7,8 @@ import AddNewCampaign from "../Page/AddNewCampaign";
 import AllCampaign from "../Page/AllCampaign";
 import DetailsCampaign from "../Page/DetailsCampaign";
 import Payment from "../Page/Payment";
+import PaymentSuccessed from "../Page/PaymentSuccessed";
+import PaymentFail from "../Page/PaymentFail";
 
 
 export const router = createBrowserRouter([
@@ -42,7 +44,16 @@ export const router = createBrowserRouter([
       {
         path:'/payment/:id',
         element:<Payment></Payment>
+      },
+      {
+        path:'/payment/success/:tranid',
+        element:<PaymentSuccessed></PaymentSuccessed>
+      },
+      {
+        path:'/payment/fail/:tranid',
+        element:<PaymentFail></PaymentFail>
       }
+
     ]
   },
 ]);
