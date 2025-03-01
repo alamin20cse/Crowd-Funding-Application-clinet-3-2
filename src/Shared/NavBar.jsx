@@ -12,9 +12,7 @@ const NavBar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
-        <NavLink to="/addnewcampaign">Add New</NavLink>
-      </li>
+   
       <li>
         <NavLink to="/allcampaign">All Campaigns</NavLink>
       </li>

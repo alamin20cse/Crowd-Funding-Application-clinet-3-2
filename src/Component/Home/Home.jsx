@@ -1,6 +1,9 @@
 import React from 'react';
 
+
 const Home = () => {
+ 
+
     return (
         <div>
               <h1 className="text-2xl">Hellow</h1>
@@ -13,6 +16,7 @@ const Home = () => {
 <button className="btn btn-ghost">Ghost</button>
 <button className="btn btn-link">Link</button>
             </div>
+
             
         </div>
     );

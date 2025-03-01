@@ -9,6 +9,8 @@ import DetailsCampaign from "../Page/DetailsCampaign";
 import Payment from "../Page/Payment";
 import PaymentSuccessed from "../Page/PaymentSuccessed";
 import PaymentFail from "../Page/PaymentFail";
+import Dashboard from "../Layout/Dashboard";
+import Ex from "../Page/Ex";
 
 
 export const router = createBrowserRouter([
@@ -27,10 +29,6 @@ export const router = createBrowserRouter([
       {
         path:'/register',
         element:<Register></Register>
-      },
-      {
-        path:'/addnewcampaign',
-        element:<AddNewCampaign></AddNewCampaign>
       },
       {
         path:'/allcampaign',
@@ -56,4 +54,26 @@ export const router = createBrowserRouter([
 
     ]
   },
+  // dashboard
+  {
+    path:'/dashboard',
+    element:<Dashboard></Dashboard>,
+    children:[
+      {
+        path:'/dashboard',
+
+      },
+      {
+        path:'/dashboard/ex',
+        element:<Ex></Ex>
+      },
+      {
+        path:'/dashboard/addnewcampaign',
+        element:<AddNewCampaign></AddNewCampaign>
+      },
+    ]
+
+
+
+  }
 ]);

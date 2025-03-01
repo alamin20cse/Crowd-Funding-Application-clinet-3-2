@@ -1,13 +1,17 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import pic from '../assets/payment.gif'
 
 const PaymentSuccessed = () => {
-    const {id}=useParams()
+    const {tranid}=useParams()
+    // console.log(tranid);
     return (
-        <div>
-            <h1>Payment succesesed</h1>
-            <h1>Transtion id : {id}</h1>
-            
+        <div className='bg-sky-600'>
+            <img className='mx-auto' src={pic} alt="" />
+
+            <h1 className='text-3xl font-bold  p-5 text-center bg-blue-800 rounded-2xl'>Your Transtion Id : {tranid}</h1>
+          
+           <Link className='btn bg-amber-400 my-5' to='/'>Go back Home</Link>
         </div>
     );
 };

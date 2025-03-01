@@ -170,11 +170,11 @@ const {
   };
 
   return (
-    <div>
+    <div className="px-6">
       <form onSubmit={handleSubmit}>
         <div className="form-control my-5">
           <label className="label">
-            <span className="label-text">Taka</span>
+            <span className="label-text">Taka </span>
           </label>
           <input
             type="number"
