@@ -125,6 +125,7 @@ const {
             campaignId:_id,
             thumbnail:thumbnail,
             transitionid:paymentIntent.id,
+            paidStatus:true,
 
 
         }

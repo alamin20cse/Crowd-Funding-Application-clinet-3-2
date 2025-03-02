@@ -11,6 +11,8 @@ import PaymentSuccessed from "../Page/PaymentSuccessed";
 import PaymentFail from "../Page/PaymentFail";
 import Dashboard from "../Layout/Dashboard";
 import Ex from "../Page/Ex";
+import AllPaymentInfo from "../Page/AllPaymentInfo";
+import AllUsers from "../Page/AllUsers";
 
 
 export const router = createBrowserRouter([
@@ -71,6 +73,15 @@ export const router = createBrowserRouter([
         path:'/dashboard/addnewcampaign',
         element:<AddNewCampaign></AddNewCampaign>
       },
+      {
+        path:'/dashboard/allpaymentinfo',
+        element:<AllPaymentInfo></AllPaymentInfo>
+
+      },
+      {
+        path:'/dashboard/allusers',
+        element:<AllUsers></AllUsers>
+      }
     ]
 
 
