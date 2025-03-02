@@ -10,20 +10,20 @@ import { AuthContex } from "../Shared/AuthProvider";
 
 // onlyl login user will show
 
-const useUserCamagign = () => {
+const useUserPayments = () => {
     const { user, loading: authLoading,logOut } = useContext(AuthContex);
    
    
 
     const { refetch,
-        data: usercampaign = [], // Default to an empty array while loading
+        data: userpayments = [], // Default to an empty array while loading
         isLoading: queryLoading,
     } = useQuery({
-        queryKey: ['usercampaign', user?.email],
+        queryKey: ['userpayments', user?.email],
         queryFn: async () => {
             if (!user?.email) return []; // Avoid querying if email is not available
             // console.log("Fetching data for email:", user.email); // Debug log
-            const res = await axios.get(`http://localhost:5000/mycampign?email=${user.email}`);
+            const res = await axios.get(`http://localhost:5000/mypayments?email=${user.email}`);
           
             
             return res.data;
@@ -32,7 +32,7 @@ const useUserCamagign = () => {
     });
 
     const loading = authLoading || queryLoading;
-    return [usercampaign, loading,refetch];
+    return [userpayments, loading,refetch];
 };
 
-export default useUserCamagign;
+export default useUserPayments;

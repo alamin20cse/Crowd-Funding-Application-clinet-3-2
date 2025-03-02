@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import MyCampaignCard from './MyCampaignCard';
 
 const MyCampaign = () => {
-    const [usercampaign, loading]=useUserCamagign()
+    const [usercampaign, loading,refetch]=useUserCamagign()
     if(loading)
     {
         return <Loading></Loading>
@@ -16,7 +16,7 @@ const MyCampaign = () => {
             <h1>My Campaign</h1>
             <div className='grid  md:grid-cols-2 grid-cols-1 gap-4'>
                 {
-                    usercampaign.map(campaign=><MyCampaignCard campaign={campaign} key={campaign._id}></MyCampaignCard>)
+                    usercampaign.map(campaign=><MyCampaignCard refetch={refetch} campaign={campaign} key={campaign._id}></MyCampaignCard>)
                 }
             </div>
             
