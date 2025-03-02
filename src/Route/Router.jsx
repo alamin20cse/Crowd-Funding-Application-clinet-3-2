@@ -13,6 +13,9 @@ import Dashboard from "../Layout/Dashboard";
 import Ex from "../Page/Ex";
 import AllPaymentInfo from "../Page/AllPaymentInfo";
 import AllUsers from "../Page/AllUsers";
+import MyCampaign from "../Page/MyCampaign";
+import DashboardHome from "../Page/DashboardHome";
+import MyDonations from "../Page/MyDonations";
 
 
 export const router = createBrowserRouter([
@@ -63,7 +66,12 @@ export const router = createBrowserRouter([
     children:[
       {
         path:'/dashboard',
+        element:<DashboardHome></DashboardHome>
 
+      },
+      {
+        path:'/dashboard/mydonations',
+        element:<MyDonations></MyDonations>
       },
       {
         path:'/dashboard/ex',
@@ -81,7 +89,12 @@ export const router = createBrowserRouter([
       {
         path:'/dashboard/allusers',
         element:<AllUsers></AllUsers>
+      },
+      {
+        path:'/dashboard/mycampaign',
+        element:<MyCampaign></MyCampaign>
       }
+
     ]
 
 

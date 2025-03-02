@@ -1,8 +1,9 @@
 import { NavLink, Outlet } from "react-router-dom";
 
 import { FaHome, FaUser, FaUsers } from "react-icons/fa";
-import { MdContentPasteSearch, MdOutlineBloodtype, MdOutlineRequestPage } from "react-icons/md";
-import { CiSquareQuestion } from "react-icons/ci";
+import { MdAddToPhotos, MdCampaign, MdContentPasteSearch, MdOutlineBloodtype, MdOutlineRequestPage, MdPaid } from "react-icons/md";
+import { FcDonate } from "react-icons/fc";
+
 
 
 
@@ -38,24 +39,18 @@ const Dashboard = () => {
                     <FaUser /> Profile
                 </NavLink>
             </li>
-            
             <li>
                 <NavLink 
-                    to="/dashboard/donationrequest" 
+                    to="/dashboard/mydonations" 
                     className={({ isActive }) => isActive ? "text-white bg-blue-500" : "hover:text-white"}
                 >
-                    <MdOutlineBloodtype /> Request Created
+                   <FcDonate /> My Donations
                 </NavLink>
             </li>
             
-            <li>
-                <NavLink 
-                    to="/dashboard/my-donation-requests" 
-                    className={({ isActive }) => isActive ? "text-white bg-blue-500" : "hover:text-white"}
-                >
-                    <CiSquareQuestion /> My Donation Request
-                </NavLink>
-            </li>
+         
+            
+           
             
             <li>
                 <NavLink 
@@ -83,7 +78,7 @@ const Dashboard = () => {
                         to="/dashboard/addnewcampaign" 
                         className={({ isActive }) => isActive ? "text-white bg-blue-500" : "hover:text-white"}
                     >
-                        <FaUsers /> Add new
+                       <MdAddToPhotos /> Add New Campaign
                     </NavLink>
                 </li>
                 <li>
@@ -91,7 +86,15 @@ const Dashboard = () => {
                         to="/dashboard/allpaymentinfo" 
                         className={({ isActive }) => isActive ? "text-white bg-blue-500" : "hover:text-white"}
                     >
-                        <FaUsers /> All Payment Informatin
+                       <MdPaid/> All Payment Informatin
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink 
+                        to="/dashboard/mycampaign" 
+                        className={({ isActive }) => isActive ? "text-white bg-blue-500" : "hover:text-white"}
+                    >
+                       <MdCampaign /> My Campaign
                     </NavLink>
                 </li>
               
@@ -126,7 +129,7 @@ const Dashboard = () => {
             </div>
 
             {/* Sidebar for Larger Screens */}
-            <div className="hidden py-4 lg:block w-64 bg-orange-400 p-4">
+            <div className="hidden py-4 lg:block w-64 bg-blue-200  p-4">
                 <ul className="space-y-2 menu p-4">
                     {link}
                 </ul>

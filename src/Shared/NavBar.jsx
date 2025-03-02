@@ -16,11 +16,9 @@ const NavBar = () => {
       <li>
         <NavLink to="/allcampaign">All Campaigns</NavLink>
       </li>
+    
       <li>
-        <NavLink to="/mycampaign">My Campaigns</NavLink>
-      </li>
-      <li>
-        <NavLink to="/mydonations">My Donations</NavLink>
+        <NavLink to="/dashboard">Dashboard</NavLink>
       </li>
     </>
   );
