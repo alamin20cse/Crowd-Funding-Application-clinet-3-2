@@ -15,7 +15,7 @@ const useUsers = () => {
    
    
 
-    const {
+    const {refetch,
         data: users = [], // Default to an empty array while loading
         isLoading: queryLoading,
     } = useQuery({
@@ -32,7 +32,7 @@ const useUsers = () => {
     });
 
     const loading = authLoading || queryLoading;
-    return [users, loading];
+    return [users, loading,refetch];
 };
 
 export default useUsers;

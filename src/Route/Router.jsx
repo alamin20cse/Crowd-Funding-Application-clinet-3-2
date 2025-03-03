@@ -17,6 +17,7 @@ import MyCampaign from "../Page/MyCampaign";
 import DashboardHome from "../Page/DashboardHome";
 import MyDonations from "../Page/MyDonations";
 import UpdateCampaign from "../Page/UpdateCampaign";
+import Profile from "../Page/Profile";
 
 
 export const router = createBrowserRouter([
@@ -100,6 +101,11 @@ export const router = createBrowserRouter([
         path:'/dashboard/updatecampaigns/:id',
         element:<UpdateCampaign></UpdateCampaign>
       },
+      {
+        path:'/dashboard/profile',
+        element:<Profile></Profile>
+
+      }
      
 
     ]
