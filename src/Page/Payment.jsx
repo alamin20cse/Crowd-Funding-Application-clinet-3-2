@@ -63,7 +63,7 @@ const Payment = () => {
             name: user?.displayName,
             userPhoto: user?.photoURL,
             amount: totalprice,
-            date: new Date(),
+            date: new Date().toISOString(),  
             campaignTitle: title,
             campaignId: _id,
             thumbnail: thumbnail,

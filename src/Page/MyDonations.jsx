@@ -13,7 +13,11 @@ const MyDonations = () => {
    console.log(userpayments);
     return (
         <div>
-            <h1>my donation </h1>
+            <h1>my donation :</h1>
+            {
+               userpayments.length===0&& <div className='flex items-center justify-center min-h-screen'> <h1 className='text-3xl text-red-700 font-bold'>No donation Yet </h1> </div>
+
+            }
             <div className=' grid grid-cols-1 md:grid-cols-2 gap-6'>
                 {
                     userpayments.map(payment=><MyDonationCard payment={payment} key={payment._id}></MyDonationCard>)
