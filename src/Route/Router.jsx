@@ -18,6 +18,10 @@ import DashboardHome from "../Page/DashboardHome";
 import MyDonations from "../Page/MyDonations";
 import UpdateCampaign from "../Page/UpdateCampaign";
 import Profile from "../Page/Profile";
+import AddBlog from "../Page/AddBlog";
+import ContentManagement from "../Page/ContentManagement";
+import BlogPublic from "../Page/BlogPublic";
+import BlogDetails from "../Page/BlogDetails";
 
 
 export const router = createBrowserRouter([
@@ -58,6 +62,15 @@ export const router = createBrowserRouter([
         path:'/payment/fail/:tranid',
         element:<PaymentFail></PaymentFail>
       },
+        {
+         path:'/blogpublic',
+         element:<BlogPublic></BlogPublic>
+      },
+      {
+         path:'/blogdetails/:id',
+         element:<BlogDetails></BlogDetails>
+      }
+
       
 
     ]
@@ -105,7 +118,16 @@ export const router = createBrowserRouter([
         path:'/dashboard/profile',
         element:<Profile></Profile>
 
-      }
+      },
+      {
+         path:'/dashboard/add-blog',
+                element:<AddBlog></AddBlog>
+      },
+      {
+        path:'/dashboard/content-management',
+                element:<ContentManagement></ContentManagement>
+      },
+    
      
 
     ]

@@ -16,6 +16,9 @@ const NavBar = () => {
       <li>
         <NavLink to="/allcampaign">All Campaigns</NavLink>
       </li>
+      <li>
+        <NavLink to="/blogpublic">Blogs</NavLink>
+      </li>
     
       <li>
         <NavLink to="/dashboard">Dashboard</NavLink>

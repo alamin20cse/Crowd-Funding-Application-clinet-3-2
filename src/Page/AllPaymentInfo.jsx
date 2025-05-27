@@ -12,7 +12,7 @@ const AllPaymentInfo = () => {
 
 
   return (
-    <div className="p-4">
+    <div className="p-4">w
       <h2 className="text-2xl font-bold mb-4">All Payment Information</h2>
       <h2 className="text-2xl font-bold mb-4">Total Payment :${totalAmount}</h2>
       <div className="overflow-x-auto">
