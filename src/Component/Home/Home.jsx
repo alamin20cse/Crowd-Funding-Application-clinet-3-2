@@ -1,6 +1,7 @@
 import React from 'react';
 import SliderPart from '../../Page/SliderPart';
 import ExtraSection from '../../Page/ExtraSection';
+import AllCampaignLimit from '../../Page/AllcampaignLimit';
 
 const Home = () => {
     return (
@@ -8,13 +9,15 @@ const Home = () => {
 
 
 <SliderPart></SliderPart>
+<AllCampaignLimit></AllCampaignLimit>
+
+
 <ExtraSection></ExtraSection>
 
 
 
 
             
-              <h1 className="text-2xl">Hellow</h1>
            
             
         </div>
