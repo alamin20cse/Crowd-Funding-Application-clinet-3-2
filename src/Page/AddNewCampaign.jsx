@@ -80,7 +80,7 @@ const AddNewCampaign = () => {
         e.target.reset();
         setThumbnail(null);
         setIsSubmitting(false);
-        navigate("/");
+   navigate(`/detailsCampain/${result.insertedId}`)
       } else {
         throw new Error("Failed to submit the request.");
       }
