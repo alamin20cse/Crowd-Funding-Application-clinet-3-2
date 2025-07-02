@@ -75,7 +75,7 @@ const DetailsCampaign = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:shadow-2xl">
+    <div className="max-w-md mx-auto pt-16 bg-white rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:shadow-2xl">
       {/* Campaign Image */}
       <figure className="relative h-64">
         <img

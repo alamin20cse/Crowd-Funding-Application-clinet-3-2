@@ -5,6 +5,7 @@ import { FcDonate } from 'react-icons/fc';
 
 import useAllPaymentInfo from '../Hooks/useAllPaymentInfo';
 import Loading from '../Shared/Loading';
+import { Link } from 'react-router-dom';
 
 const AdminDashboardStatistic = () => {
     const [allusers, loading, refetch]=useAllUsers()
@@ -20,7 +21,10 @@ const AdminDashboardStatistic = () => {
     const totalAmount = allPayments.reduce((total, item) => total + parseFloat(item.amount || 0), 0);
    
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:grid-cols-2">
+       <div>
+        <Link className='btn btn-primary my-10' to='/dashboard/contact'>Get Loan</Link>
+
+         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:grid-cols-2">
 
 {/* for all user */}
             <div className="flex bg-amber-200 p-4 gap-4 rounded-3xl items-center">
@@ -69,6 +73,7 @@ const AdminDashboardStatistic = () => {
 
             
         </div>
+       </div>
     );
 };
 

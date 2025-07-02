@@ -49,9 +49,9 @@ const Login = () => {
     <div className='hero min-h-screen flex flex-col lg:flex-row-reverse'>
 
         {/* dfsdf */}
-        <div className='w-full lg:w-1/2 flex items-center justify-center bg-base-200'>
+        <div className='w-full lg:w-1/2 flex items-center  justify-center '>
 
-<Lottie animationData={ani1}></Lottie>
+<Lottie className='h-[500px]' animationData={ani1}></Lottie>
 
       </div>
 
@@ -60,7 +60,7 @@ const Login = () => {
 
 {/* another */}
 
-      <div className='w-full lg:w-1/2 flex items-center justify-center bg-base-200'>
+      <div className='w-full lg:w-1/2 flex items-center my-10 justify-center bg-base-200'>
       <div className=" bg-base-200 min-h-screen">
          
         
@@ -91,7 +91,7 @@ const Login = () => {
          </div>
        </form>
       
-       <p>Are you New? <Link className='text-red-400' to='/register'>Regiester</Link> </p>
+       <p className='px-10 pb-10'>Are you New? <Link className='text-red-400' to='/register'>Regiester</Link> </p>
  
      </div>
    </div>

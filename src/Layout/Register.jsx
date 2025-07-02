@@ -173,12 +173,12 @@ const SignUp = () => {
     };
 
     return (
-        <div className="flex flex-col lg:flex-row-reverse">
+        <div className="flex flex-col pt-10 lg:flex-row-reverse">
             
        <title>Blood Donation Application | Signup</title>
   
             <div className="w-full lg:w-1/2 flex items-center justify-center bg-base-200">
-                <Lottie animationData={ani1} />
+                <Lottie className="h-[600px]" animationData={ani1} />
             </div>
             <div className="w-full lg:w-1/2 flex items-center justify-center bg-base-100">
                 <div className="max-w-sm w-full p-6 shadow-2xl rounded-lg">

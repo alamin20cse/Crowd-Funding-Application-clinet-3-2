@@ -2,6 +2,7 @@ import React from 'react';
 import useUserPayments from '../Hooks/useUserPayments';
 import Loading from '../Shared/Loading';
 import { FcDonate } from 'react-icons/fc';
+import { Link } from 'react-router-dom';
 
 const UserDashboardStatistic = () => {
    
@@ -15,6 +16,7 @@ const UserDashboardStatistic = () => {
 
     return (
         <div>
+           <Link className='btn btn-primary my-10' to='/dashboard/contact'>Get Loan</Link>
           <div className="flex bg-amber-200 p-4 gap-4 rounded-3xl items-center">
                           {/* icon */}
                           <div className="w-16 h-16 bg bg-yellow-100 rounded-2xl">

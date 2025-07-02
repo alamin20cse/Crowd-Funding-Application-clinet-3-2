@@ -22,6 +22,8 @@ import AddBlog from "../Page/AddBlog";
 import ContentManagement from "../Page/ContentManagement";
 import BlogPublic from "../Page/BlogPublic";
 import BlogDetails from "../Page/BlogDetails";
+import PrivateRoute from "./PrivateRoute";
+import Contact from "../Page/Contact";
 
 
 export const router = createBrowserRouter([
@@ -82,7 +84,7 @@ export const router = createBrowserRouter([
     children:[
       {
         path:'/dashboard',
-        element:<DashboardHome></DashboardHome>
+        element:<PrivateRoute><DashboardHome></DashboardHome></PrivateRoute>
 
       },
       {
@@ -127,6 +129,10 @@ export const router = createBrowserRouter([
         path:'/dashboard/content-management',
                 element:<ContentManagement></ContentManagement>
       },
+      {
+        path:'/dashboard/contact',
+        element:<Contact></Contact>
+      }
     
      
 
