@@ -22,7 +22,7 @@ const AdminDashboardStatistic = () => {
    
     return (
        <div>
-        <Link className='btn btn-primary my-10' to='/dashboard/contact'>Get Loan</Link>
+        <Link className='btn btn-primary my-10' to='/dashboard/contact'>Get Funded</Link>
 
          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:grid-cols-2">
 
