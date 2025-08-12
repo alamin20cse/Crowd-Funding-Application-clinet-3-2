@@ -4,6 +4,9 @@ Welcome to the **CrowdFunding Application** – a full-stack donation-based plat
 
 ---
 
+ ## Admin crediential
+ email: admin@gmail.com
+ password:1234aA
 ## 🚀 Features
 
 ### 🧑‍💻 User Features
@@ -134,7 +137,7 @@ Welcome to the **CrowdFunding Application** – a full-stack donation-based plat
 
 ## 🔗 Live Site
 
-👉 [Live Demo Link](https://your-live-site-url.com)
+👉 [Live Demo Link](https://crowd-funding-application-3-2.web.app/)
 
 ---
 
